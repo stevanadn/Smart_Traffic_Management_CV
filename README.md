@@ -1,32 +1,23 @@
-Traffic Violation & Smart Traffic Light System
-Repositori ini berisi implementasi sistem Computer Vision untuk mendeteksi pelanggaran lalu lintas (khususnya penggunaan helm) dan mensimulasikan manajemen lampu lalu lintas cerdas berdasarkan kepadatan kendaraan. Proyek ini menggunakan model deteksi objek YOLOv11 yang telah di training ulang dan custom untuk mengidentifikasi kendaraan, orang, dan penggunaan helm secara real-time dari sebuah gambar.
+# Traffic Violation & Smart Traffic Light System 🚦
 
-Fitur Utama
-Deteksi Kendaraan Multi-Kelas: Mampu mengidentifikasi dan membedakan antara motor, mobil, bus, dan truk.
+This repository contains a Computer Vision system implementation for detecting traffic violations (specifically helmet usage) and simulating a smart traffic light management system based on vehicle density. This project utilizes a custom-trained **YOLOv11** object detection model to identify vehicles, people, and helmet usage in real-time from an image.
 
-Deteksi Pelanggaran Helm: Secara otomatis mengidentifikasi pengendara motor dan memeriksa apakah mereka menggunakan helm atau tidak.
+## ✨ Key Features
 
-Asosiasi Pengendara-Motor: Menggunakan Intersection over Union (IoU) untuk secara cerdas menghubungkan orang dengan motor terdekat untuk analisis helm.
+* **Multi-Class Vehicle Detection:** Capable of identifying and distinguishing between motorcycles, cars, buses, and trucks.
+* **Helmet Violation Detection:** Automatically identifies motorcyclists and checks whether they are wearing a helmet.
+* **Rider-Motorcycle Association:** Utilizes *Intersection over Union* (IoU) to intelligently link a person with the nearest motorcycle for helmet analysis.
+* **Traffic Light Duration Simulation:** Counts the total number of vehicles in the frame to recommend a dynamic green light duration, complete with minimum and maximum thresholds.
+* **Clear Visualizations:** Provides visual output with clear bounding boxes and informational labels:
+  * 🔴 **Violator (No Helmet):** Marked in red.
+  * 🟢 **Safe Rider (With Helmet):** Marked in green.
+  * 🔵/🟠 **Other Vehicles:** Marked in blue and orange.
+  * ⏱️ **Traffic Light Information:** Displays the vehicle count and estimated light duration in the top right corner.
 
-Simulasi Durasi Lampu Lalu Lintas: Menghitung jumlah total kendaraan dalam frame untuk merekomendasikan durasi lampu hijau yang dinamis, dengan batas minimum dan maksimum.
+## 🛠️ Technologies Used
 
-Visualisasi yang Jelas: Memberikan output visual dengan kotak pembatas (bounding box) dan label yang jelas:
-
-Pelanggar (Tanpa Helm): Ditandai dengan warna merah.
-
-Pengendara Aman (Pakai Helm): Ditandai dengan warna hijau.
-
-Kendaraan Lain: Ditandai dengan warna biru dan oranye.
-
-Informasi Lampu Lalu Lintas: Menampilkan jumlah kendaraan dan durasi lampu di pojok kanan atas.
-
-Teknologi yang Digunakan
-Python 3.12
-
-Ultralytics YOLOv11: Sebagai engine utama untuk deteksi objek.
-
-OpenCV: Untuk pemrosesan gambar, seperti membaca, menulis, dan menggambar pada gambar.
-
-NumPy: Untuk operasi numerik yang efisien, terutama dalam kalkulasi IoU.
-
-Matplotlib: Untuk menampilkan hasil akhir di dalam notebook.
+* **Python 3.12**
+* **Ultralytics YOLOv11:** The main engine for object detection.
+* **OpenCV:** For visual processing tasks (reading, writing, and drawing on images).
+* **NumPy:** For efficient numerical operations, especially for matrix and IoU calculations.
+* **Matplotlib:** For displaying the final results (*plotting*) within a notebook environment.
